@@ -10,7 +10,7 @@ class PersonForm(ModelForm):
         fields = "__all__"
         widgets = {'email': EmailInput(attrs={"type": "email"})}
 
-
+# Address form added
 class AddressForm(ModelForm):
     class Meta:
         model = Address
