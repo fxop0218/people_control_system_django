@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome😁</title>
+</head>
+<body>
+    <h1>Welcome to SAP</h1>
+    <div>The number of persons its: {{no_persons}}</div>
+    <div>
+        <ul>
+            <table border = "1">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for person in people %}
+                    <tr>
+                        <td>{{person.id}}</td>
+                        <td>{{person.name}} {{person.surname}}</td>
+                        <td>{{person.email}}</td>
+                        <td><a href="person_info/{{person.id}}">See more information</a></td>
+                        <td><a href="person_edit/{{person.id}}">Edit information</a></td>
+                        <td><a href="person_delete/{{person.id}}">Delete</a></td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </ul>
+    </div>
+    <div>
+        <a href="new_person">Add new person</a>
+    </div>
+</body>
+</html>
